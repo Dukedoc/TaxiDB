@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.epam.ryazan.taxi.dba'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc"
+    }
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '2.1.4.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.4.RELEASE'
+    compile group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '6.1.0.jre8'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.2.Final'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
